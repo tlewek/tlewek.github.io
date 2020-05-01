@@ -1,9 +1,16 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<title>lewek.org</title>
-	<meta charset="UTF-8">
-</head>
-<body>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Name Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header></header>
+    <button id="next" onClick="getElementById('choice').innerHTML = randomName">Who’s Next?</button>
+    <p id="choice"></p>
+    <button id="reset" onClick="location.reload()">Reset</button>
+    <footer></footer>
+    <script src="names.js"></script>
+  </body>
 </html>

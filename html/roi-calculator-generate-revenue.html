@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROI Calculator - Generate Revenue</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>ROI Calculator - Generate Revenue</h1>
+    <form id="generate-revenue-roi" onsubmit="resultsGenerate()">
+      <label for="projected-revenue">Projected Revenue ($)</label>
+      <input type="number" name="projected-revenue" id="projected-revenue">
+      <br/>
+      <label for="likelihood-success">Likelihood of Success (%)</label>
+      <input type="number" name="likelihood-success" id="likelihood-success">
+      <br/>
+      <label for="product-lifespan">Product Lifespan (Years)</label>
+      <input type="number" name="product-lifespan" id="product-lifespan">
+      <br/>
+      <label for="development-cost">Development Cost ($)</label>
+      <input type="number" name="development-cost" id="development-cost">
+      <br/>
+      <label for="ongoing-cost">Ongoing Cost ($)</label>
+      <input type="number" name="ongoing-cost" id="ongoing-cost">
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+    <script type="text/javascript" src="../js/roi.js"></script>
+  </body>
+</html>

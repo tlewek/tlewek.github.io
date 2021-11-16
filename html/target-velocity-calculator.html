@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target Velocity Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  </head>
+  <body>
+    <h1>Target Velocity Calculator</h1>
+    <form id="target-velocity-calculator" onsubmit="targetVelocity()">
+      <label for="average-velocity">Average Velocity (Story Points)</label>
+      <input type="number" name="average-velocity" id="average-velocity">
+      <br/>
+      <label for="baseline-capacity">Baseline Capacity (Engineering Days)</label>
+      <input type="number" name="baseline-capacity" id="baseline-capacity">
+      <br/>
+      <label for="adjusted-capacity">Adjusted Capacity (Engineering Days)</label>
+      <input type="number" name="adjusted-capacity" id="adjusted-capacity">
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+    <script type="text/javascript" src="../js/target-velocity.js"></script>
+  </body>
+</html>

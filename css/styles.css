@@ -4,14 +4,12 @@ body {
   max-width: 100%;
 }
 
-#next {
+h1 {
   font-size: xx-large;
   font-family: 'Montserrat', sans-serif;
+  font-style: italic;
   padding: 15px;
   margin: 15px;
-  background-color: #034a51;
-  color: white;
-  border-radius: 5px;
   text-align: center;
 }
 
@@ -24,11 +22,15 @@ body {
   border-radius: 5px;
 }
 
-p {
-  font-size: xx-large;
+label {
   font-family: 'Montserrat', sans-serif;
   padding: 15px;
   margin: 15px;
+  clear: left;
+}
+
+input {
+  float: right;
 }
 
 header {

@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Target Velocity Calculator</h1>
-    <form id="target-velocity-calculator" onsubmit="calcTargetVelocity()">
+    <form id="target-velocity-calculator" onsubmit="return false">
       <label for="average-velocity">Average Velocity (Story Points)</label>
       <input type="number" name="average-velocity" id="average-velocity">
       <br/>
@@ -19,12 +19,12 @@
       <input type="number" name="adjusted-capacity" id="adjusted-capacity">
       <br/>
       <br/>
-      <input class="reset" type="reset" value="Reset">
+      <input type="submit" value="Submit" onclick="calcTargetVelocity()">
       <br/>
       <br/>
-      <input class="submit" type="submit" value="Submit">
+      <input type="reset" value="Reset" onclick="window.location.reload(true)">
     </form>
-    <div id="target-velocity-calc"></div>
+    <p id="target-velocity-calc"></p>
     <script type="text/javascript" src="../js/target-velocity.js"></script>
   </body>
 </html>

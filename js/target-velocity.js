@@ -3,5 +3,5 @@ function calcTargetVelocity() {
   let baselineCapacity = document.getElementById("baseline-capacity").value;
   let adjustedCapacity = document.getElementById("adjusted-capacity").value;
   let targetVelocity = (averageVelocity * (adjustedCapacity / baselineCapacity));
-  document.getElementById('target-velocity-calc').innerHTML = targetVelocity;
+  document.getElementById('target-velocity-calc').innerHTML = "Your target velocity: "+targetVelocity;
 }

@@ -17,8 +17,12 @@ const names = [
   }
 ];
 
-const randomName = names[Math.floor(Math.random() * names.length)];
+// Define the function that runs on button click
+function pickWinner() {
+  const randomName = names[Math.floor(Math.random() * names.length)];
 
-const message = `Congratulations, ${randomName.firstName} ${randomName.lastName} (ticket # ${randomName.ticketNumber})! You won ${randomName.ticketType}.`;
+  const message = `Congratulations, ${randomName.firstName} ${randomName.lastName} (ticket # ${randomName.ticketNumber})! You won ${randomName.ticketType}.`;
 
-console.log(message);
+  // Display the message in the <p> tag
+  document.getElementById('choice').innerText = message;
+}

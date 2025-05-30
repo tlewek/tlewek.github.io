@@ -4,7 +4,6 @@
     <title>Name Generator</title>
     <link rel="stylesheet" type="text/css" href="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- Add defer here -->
     <script src="../js/names.js" defer></script>
   </head>
   <body>
@@ -13,6 +12,9 @@
     <button id="next" onclick="pickWinner()">Pick Winner</button>
 
     <p id="choice"></p>
+
+    <!-- ✅ New button to copy message -->
+    <button id="copy" onclick="copyMessage()">Copy Message</button>
 
     <button id="reset" onclick="location.reload()">Reset</button>
 

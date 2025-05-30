@@ -84,12 +84,27 @@ const names = [
 {ticketNumber: '85861232A0011',firstName: 'Rebecca',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
 ];
 
-// Define the function that runs on button click
-function pickWinner() {
+// Expose pickWinner globally
+window.pickWinner = function () {
   const randomName = names[Math.floor(Math.random() * names.length)];
+  const message = `Congratulations, ${randomName.firstName} ${randomName.lastName} (ticket # ${randomName.ticketNumber})! You won ${randomName.ticketType}.`;
 
-  const message = `Congratulations, ${randomName.firstName} (ticket # ${randomName.ticketNumber})! You won ${randomName.ticketType}.\r Felicidades ${randomName.firstName} (ticket # ${randomName.ticketNumber})! Tú ganaste ${randomName.ticketType}.`;
-
-  // Display the message in the <p> tag
   document.getElementById('choice').innerText = message;
-}
+};
+
+// ✅ Add this function to copy message
+window.copyMessage = function () {
+  const text = document.getElementById('choice').innerText;
+
+  if (!text) {
+    alert("No message to copy!");
+    return;
+  }
+
+  navigator.clipboard.writeText(text)
+    .then(() => alert("Message copied to clipboard!"))
+    .catch(err => {
+      console.error("Failed to copy: ", err);
+      alert("Failed to copy message.");
+    });
+};

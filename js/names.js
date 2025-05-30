@@ -17,4 +17,8 @@ const names = [
   }
 ];
 
-const randomName = names[Math.floor(Math.random()*names.length)];
+const randomName = names[Math.floor(Math.random() * names.length)];
+
+const message = `Congratulations, ${randomName.firstName} ${randomName.lastName} (ticket # ${randomName.ticketNumber})! You won ${randomName.ticketType}.`;
+
+console.log(message);

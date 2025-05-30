@@ -7,10 +7,17 @@
   </head>
   <body>
     <header></header>
-    <button id="next" onClick="getElementById('choice').innerHTML = randomName">Pick Winner</button>
+
+    <!-- Updated button to call a function -->
+    <button id="next" onclick="pickWinner()">Pick Winner</button>
+
+    <!-- Message gets inserted here -->
     <p id="choice"></p>
-    <button id="reset" onClick="location.reload()">Reset</button>
+
+    <button id="reset" onclick="location.reload()">Reset</button>
     <footer></footer>
-    <script src="../js/names.js"></script>
+
+    <!-- Script reference should be correct relative to this HTML file -->
+    <script src="names.js"></script>
   </body>
 </html>

@@ -714,7 +714,7 @@ function pickWinner() {
   }
 
   const randomWinner = selectedArray[Math.floor(Math.random() * selectedArray.length)];
-  const message = `Congratulations, ${randomWinner.firstName} (ticket # ${randomWinner.ticketNumber})! You won ${randomWinner.ticketType}.`;
+  const message = `Congratulations, ${randomWinner.firstName} (ticket # ${randomWinner.ticketNumber})! You won ${randomWinner.ticketType}`;
 
   document.getElementById("choice").innerText = message;
 }

@@ -687,6 +687,7 @@ function pickWinner() {
       break;
     case "cookbook":
       selectedArray = cookbookEntries;
+      break;
     case "entertainment":
       selectedArray = entertainmentEntries;
       break;

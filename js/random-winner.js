@@ -1,5 +1,3 @@
-// add export here
-
 const mlbEntries = [
 {ticketNumber: '80923967A0594',firstName: 'Amy',ticketType: 'Raffle Ticket/Boleto de Rifa: $100 Gift Certificate to Major League Baseball Shop / Certificado de regalo de $100 para la tienda de MLB'},
 {ticketNumber: '65548084A0588',firstName: 'Johana',ticketType: 'Raffle Ticket/Boleto de Rifa: $100 Gift Certificate to Major League Baseball Shop / Certificado de regalo de $100 para la tienda de MLB'},

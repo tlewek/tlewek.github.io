@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Prize Winner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/names.js" defer></script>
+</head>
+<body>
+  <header><h1>Random Prize Winner</h1></header>
+
+  <!-- Dropdown menu -->
+  <div class="controls">
+  <select id="dropdown" onchange="handleDropdownChange()">
+    <option value="default" disabled selected hidden>Choose a Prize Category</option>
+    <option value='mlb'>$100 Gift Certificate to Major League Baseball Shop</option>
+    <option value='life'>2 Life Coaching Sessions</option>
+    <option value='yoga'>2nd Story Yoga and Pilates</option>
+    <option value='3d'>3D Scanning Service (Person, Place, or Thing)</option>
+    <option value='table-wine'>A bundle from Table Wine, Standalone Cheese, and Art Retail Therapy</option>
+    <option value='tote'>A Complete Summer Reading Tote for Grown-Ups</option>
+    <option value='deliciousness'>A Day of Deliciousness in JH</option>
+    <option value='cookbook'>Baking Cookbook Bundle</option>
+    <option value='entertainment'>Entertainment gift bundle from A&E and Regal</option>
+    <option value='guggenheim'>Family and Friends Trip to the Guggenheim Museum</option>
+    <option value='hazel-village'>Hazel Village Gracie Cat Stuffed Animal Bundle</option>
+    <option value='bakery'>JH Snacks & Bakery Bundle</option>
+    <option value='mls'>Official MLS Jersey Bundle</option>
+    <option value='goldfish'>One Month of Classes at Goldfish Swim School</option>
+    <option value='soccer'>Soccer Kids NYC 7-Week Program</option>
+  </select>
+  </div>
+
+  <button id="next" onclick="pickWinner()">Pick Winner</button>
+  <p id="choice"></p>
+  <button id="reset" onclick="location.reload()">Reset</button>
+
+  <footer><small>&copy; 2025</small></footer>
+</body>
+</html>

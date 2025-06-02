@@ -1,63 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Name Generator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="../js/names.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Prize Winner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/names.js" defer></script>
+</head>
+<body>
+  <header><h1>Random Prize Winner</h1></header>
 
-    <!-- ✅ Embedded minimalist CSS -->
-    <style>
-      body {
-        font-family: 'Montserrat', sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        text-align: center;
-      }
+  <!-- Dropdown menu -->
+  <div class="controls">
+  <select id="dropdown" onchange="handleDropdownChange()">
+    <option value="default" disabled selected hidden>Choose a Prize Category</option>
+    <option value='mlb'>$100 Gift Certificate to Major League Baseball Shop</option>
+    <option value='life'>2 Life Coaching Sessions</option>
+    <option value='yoga'>2nd Story Yoga and Pilates</option>
+    <option value='3d'>3D Scanning Service (Person, Place, or Thing)</option>
+    <option value='table-wine'>A bundle from Table Wine, Standalone Cheese, and Art Retail Therapy</option>
+    <option value='tote'>A Complete Summer Reading Tote for Grown-Ups</option>
+    <option value='deliciousness'>A Day of Deliciousness in JH</option>
+    <option value='cookbook'>Baking Cookbook Bundle</option>
+    <option value='entertainment'>Entertainment gift bundle from A&E and Regal</option>
+    <option value='guggenheim'>Family and Friends Trip to the Guggenheim Museum</option>
+    <option value='hazel-village'>Hazel Village Gracie Cat Stuffed Animal Bundle</option>
+    <option value='bakery'>JH Snacks & Bakery Bundle</option>
+    <option value='mls'>Official MLS Jersey Bundle</option>
+    <option value='goldfish'>One Month of Classes at Goldfish Swim School</option>
+    <option value='soccer'>Soccer Kids NYC 7-Week Program</option>
+  </select>
+  </div>
 
-      header, footer {
-        margin: 20px 0;
-      }
+  <button id="next" onclick="pickWinner()">Pick Winner</button>
+  <p id="choice"></p>
+  <button id="reset" onclick="location.reload()">Reset</button>
 
-      button {
-        background-color: #333;
-        color: white;
-        border: none;
-        padding: 12px 24px;
-        margin: 8px;
-        border-radius: 6px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-      }
-
-      button:hover {
-        background-color: #555;
-        transform: translateY(-2px);
-      }
-
-      #choice {
-        font-size: 1.2rem;
-        margin: 20px 0;
-        max-width: 600px;
-      }
-    </style>
-  </head>
-  <body>
-    <header><h1>Name Generator</h1></header>
-
-    <button id="next" onclick="pickWinner()">Pick Winner</button>
-    <p id="choice"></p>
-    <button id="copy" onclick="copyMessage()">Copy Message</button>
-    <button id="reset" onclick="location.reload()">Reset</button>
-
-    <footer><small>&copy; 2025</small></footer>
-  </body>
+  <footer><small>&copy; 2025</small></footer>
+</body>
 </html>

@@ -1,110 +1,87 @@
-const names = [
-{ticketNumber: '79954958A0548',firstName: 'Jaron',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '69995887A0536',firstName: 'Rosario',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '69211755A0531',firstName: 'Rosemary',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '71677256A0527',firstName: 'Andrew',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '54393791A0525',firstName: 'Ella',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '83065471A0526',firstName: 'Ching',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '32970662A0524',firstName: 'Jacob',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '94540372A0523',firstName: 'Jackson',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '66543994A0490',firstName: 'Jomarie',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '44584394A0491',firstName: 'Jomarie',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '39311189A0475',firstName: 'Sierra',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '14316440A0465',firstName: 'Chris',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '38597612A0464',firstName: 'Chris',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '98089688A0449',firstName: 'Myra',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '86622625A0445',firstName: 'Lynn',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '19392395A0409',firstName: 'Michael',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '11600778A0408',firstName: 'Nicolas',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '83255050A0400',firstName: 'Noga',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '47221393A0401',firstName: 'Noga',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '43863496A0367',firstName: 'Victoria',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '26630081A0368',firstName: 'Victoria',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '20977616A0353',firstName: 'Katelyn',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '21186590A0351',firstName: 'Katelyn',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '24245984A0352',firstName: 'Katelyn',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '14107665A0339',firstName: 'Rezaur',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '30494431A0330',firstName: 'Laura',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '85865803A0329',firstName: 'Laura',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '74000142A0322',firstName: 'Jean-Philippe',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '79055667A0320',firstName: 'Jean-Philippe',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '94086039A0321',firstName: 'Jean-Philippe',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '89231674A0308',firstName: 'Ashley',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '71976704A0307',firstName: 'Ashley',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '76569020A0304',firstName: 'Bohee',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '10372689A0299',firstName: 'Samantha',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '39592325A0293',firstName: 'Joanna And James',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '19386905A0294',firstName: 'Joanna And James',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '14643797A0292',firstName: 'Joanna And James',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '64311154A0277',firstName: 'Ruby',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '27061433A0268',firstName: 'Kimberly',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '94327095A0267',firstName: 'Kimberly',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '33823198A0257',firstName: 'Elizabeth',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '19889754A0253',firstName: 'Sarah',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '24002691A0252',firstName: 'Sarah',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '24305719A0219',firstName: 'Lucy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '21850588A0218',firstName: 'Lucy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '91115653A0205',firstName: 'Erin',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '35187230A0200',firstName: 'Sarah',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '14656910A0201',firstName: 'Sarah',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '92842456A0188',firstName: 'Patrick',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '69139638A0182',firstName: 'Maria',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '84072949A0181',firstName: 'Maria',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '47855267A0178',firstName: 'Michelle',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '71279769A0176',firstName: 'Michelle',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '38940783A0177',firstName: 'Michelle',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '18333085A0175',firstName: 'Michelle',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '30037781A0159',firstName: 'Jennifer',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '26425466A0154',firstName: 'Joy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '20093803A0147',firstName: 'Steven',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '36683103A0146',firstName: 'Steven',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '30495464A0137',firstName: 'Lauren',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '38916216A0131',firstName: 'Leanne',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '64598613A0132',firstName: 'Leanne',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '93597491A0123',firstName: 'Judy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '40798864A0122',firstName: 'Judy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '63273760A0115',firstName: 'Stacy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '13311781A0116',firstName: 'Stacy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '88027832A0114',firstName: 'Stacy',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '50532831A0105',firstName: 'Angela',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '20601579A0097',firstName: 'Irina',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '75494023A0090',firstName: 'Sharifah',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '31440421A0083',firstName: 'Edmond',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '69876541A0084',firstName: 'Edmond',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '53491724A0065',firstName: 'Julie',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '39741596A0057',firstName: 'Rose',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '25538544A0058',firstName: 'Rose',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '27410498A0049',firstName: 'Maria',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '40475699A0044',firstName: 'Melissa',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '45465284A0032',firstName: 'Susanne',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '26643895A0030',firstName: 'Susanne',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '93918540A0031',firstName: 'Susanne',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '20862769A0029',firstName: 'Susanne',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '89266282A0010',firstName: 'Rebecca',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
-{ticketNumber: '85861232A0011',firstName: 'Rebecca',ticketType: 'Raffle Ticket/Boleto de Rifa:  A Day of Deliciousness in JH: Gift certificates to Bistro Eloise, Over the Moon, and Momo Crave! / Un día de comidas deliciosas en JH: Cerificados de compra para Bistro Eloise, Over the Moon, and Momo Crave!'},
+const mlbEntries = [
+  {
+    ticketNumber: "76249564A0550",
+    firstName: "blah",
+    lastName: "blah",
+    ticketType: "prize"
+  },
+  {
+    ticketNumber: "78986927A0545",
+    firstName: "duh",
+    lastName: "duh",
+    ticketType: "prize"
+  }
 ];
 
-// Expose pickWinner globally
-window.pickWinner = function () {
-  const randomName = names[Math.floor(Math.random() * names.length)];
-  const message = `Congratulations, ${randomName.firstName} ${randomName.lastName} (ticket # ${randomName.ticketNumber})! You won ${randomName.ticketType}.`;
+const lifeEntries = [
+  {
+    ticketNumber: "76249564A0550",
+    firstName: "blah",
+    lastName: "blah",
+    ticketType: "prize"
+  },
+  {
+    ticketNumber: "78986927A0545",
+    firstName: "duh",
+    lastName: "duh",
+    ticketType: "prize"
+  }
+];
 
-  document.getElementById('choice').innerText = message;
-};
+let selectedCategory = "default";
 
-// ✅ Add this function to copy message
-window.copyMessage = function () {
-  const text = document.getElementById('choice').innerText;
+function handleDropdownChange() {
+  selectedCategory = document.getElementById("dropdown").value;
+  console.log("Selected Category:", selectedCategory);
+}
 
-  if (!text) {
-    alert("No message to copy!");
-    return;
+function pickWinner() {
+  let selectedArray = [];
+
+  switch (selectedCategory) {
+    case "mlb":
+      selectedArray = mlbEntries;
+      break;
+    case "life":
+      selectedArray = lifeEntries;
+      break;
+    case "yoga":
+      selectedArray = yogaEntries;
+      break;
+    case "3d":
+      selectedArray = threeDEntries;
+      break;
+    case "table-wine":
+      selectedArray = tableWineEntries;
+      break;
+    case "tote":
+      selectedArray = toteEntries;
+      break;
+    case "deliciousness":
+      selectedArray = cookbookEntries;
+      break;
+    case "entertainment":
+      selectedArray = guggenheimEntries;
+      break;
+    case "hazel-village":
+      selectedArray = hazelVillageEntries;
+      break;
+    case "mls":
+      selectedArray = mlsEntries;
+      break;
+    case "goldfish":
+      selectedArray = goldfishEntries;
+      break;
+    case "soccer":
+      selectedArray = soccerEntries;
+      break;
+    default:
+      document.getElementById("choice").innerText = "Please select a category.";
+      return;
   }
 
-  navigator.clipboard.writeText(text)
-    .then(() => alert("Message copied to clipboard!"))
-    .catch(err => {
-      console.error("Failed to copy: ", err);
-      alert("Failed to copy message.");
-    });
-};
+  const randomWinner = selectedArray[Math.floor(Math.random() * selectedArray.length)];
+  const message = `Congratulations, ${randomWinner.firstName} (ticket # ${randomWinner.ticketNumber})! You won ${randomWinner.ticketType}.`;
+
+  document.getElementById("choice").innerText = message;
+}
